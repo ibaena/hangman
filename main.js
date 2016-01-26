@@ -18,20 +18,20 @@ var game = {
   keepPromptingUser: function(){
     var self = this;
     prompt.get(['guessLetter'], function(err, result){
-      console.log('The Letter you picked is'+ result.guessLetter);
+      console.log('The Letter you picked is '+ result.guessLetter);
       var findHowManyOfUserGuess = self.currentWrd.checkIfLetterFound(result.guessLetter);
       if (findHowManyOfUserGuess === 0){
         console.log('You guess wrong');
-        self.guessesRemaining = --;
+        self.guessesRemaining --;
       }
       else{
-        console.log(‘You guessed right!’);
-          if(self.current.didWeFindTheWord() === true){
+        console.log('You guessed right!');
+          if(self.currentWrd.didWeFindTheWord() === true){
             console.console.log('You won!');
             return 1;
           }
       }
-      console.log('Guesses remaining:' + guessesRemaining);
+      console.log('Guesses remaining:' + self.guessesRemaining);
       console.log(self.currentWrd.wordRender());
 
       if(self.guessesRemaining > 0 && self.currentWrd.found === false){

@@ -1,4 +1,4 @@
-var Letter = require('Letter');
+var Letter = require('./letter.js');
 
 function Word(wrd){
   this.word = wrd;
@@ -16,7 +16,7 @@ function Word(wrd){
     for (j = 0; j <this.lets.length; j++){
       if(Letter.charac = guessLetter){
         Letter.appear = true;
-        whatToReturn = ++;
+        whatToReturn ++;
       }
         return whatToReturn;
     }
