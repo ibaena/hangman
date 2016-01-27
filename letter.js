@@ -1,4 +1,4 @@
-function Letter(let){
+module.exports = function(let){
   this.charac = let;
   this.appear = false;
   this.letterRender = function(){
@@ -10,6 +10,5 @@ function Letter(let){
       console.log(this.charac);
       return(this.charac);
     }
-  }
+  };
 }
-module.exports = Letter;

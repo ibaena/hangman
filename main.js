@@ -35,7 +35,7 @@ var game = {
       console.log(self.currentWrd.wordRender());
 
       if(self.guessesRemaining > 0 && self.currentWrd.found === false){
-        keepPromptingUser();
+        self.keepPromptingUser();
       }
       else if(self.guessesRemaining === 0) {
         console.log('Gameover');

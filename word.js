@@ -1,6 +1,6 @@
 var Letter = require('./letter.js');
 
-function Word(wrd){
+module.exports = function (wrd){
   this.word = wrd;
   this.lets = [];
   this.found = false;
@@ -31,8 +31,8 @@ function Word(wrd){
   this.wordRender=function(){
     var str = "";
     for (var i = 0; i < this.lets.length; i++) {
-      str += Letter.letterRender(this.lets[i]);
+      var currentLetter = Letter.letterRender;
+      str += currentLetter;
     }
   }
 }
-module.exports = Word;
